@@ -102,7 +102,7 @@ public class DefaultVersionResolver
         setSyncContextFactory( syncContextFactory );
         setRepositoryEventDispatcher( repositoryEventDispatcher );
     }
-
+ 
     public void initService( ServiceLocator locator )
     {
         setMetadataResolver( locator.getService( MetadataResolver.class ) );
@@ -552,7 +552,7 @@ public class DefaultVersionResolver
             hash = hash * 31 + artifactId.hashCode();
             hash = hash * 31 + classifier.hashCode();
             hash = hash * 31 + extension.hashCode();
-            hash = hash * 31 + version.hashCode();
+            hash = hash * 31 + version.hashCode(); 
             hash = hash * 31 + localRepo.hashCode();
             hash = hash * 31 + repositories.hashCode();
             hashCode = hash;
